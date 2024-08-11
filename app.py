@@ -2,6 +2,7 @@
 
 from flask import Flask,render_template,request
 import pickle
+import numpy as np
 
 
 
@@ -9,7 +10,9 @@ app = Flask(__name__)
 
 
 #load the model
-model = pickle.load(open("fraud_model.pkl", 'rb'))
+model_path = 'fraud_model.pkl'
+with open(model_path, 'rb') as file:
+    model = pickle.load(file)
 
 
 
