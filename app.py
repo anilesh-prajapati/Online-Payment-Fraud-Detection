@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 
 #load the model
-model = pickle.load(open("fraud_model.sav", 'rb'))
+model = pickle.load(open("fraud_model.pkl", 'rb'))
 
 
 
